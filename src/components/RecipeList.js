@@ -9,6 +9,7 @@ import { projectFirestore } from '../firebase/config';
 export default function RecipeList({ recipes }) { 
   
   const {mode} = useTheme()
+  
   const handleClick = (id) => {
     projectFirestore.collection('recipes').doc(id).delete() 
   }
